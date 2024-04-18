@@ -18,8 +18,6 @@ test("test2", async ({ page }) => {
   await page.getByRole("button", { name: "Sign In" }).click();
 });
 
-import { test, expect } from "@playwright/test";
-
 test("test3", async ({ page }) => {
   await page.goto("https://magento.softwaretestingboard.com/");
   await page.getByLabel("Consent", { exact: true }).click();
@@ -39,7 +37,7 @@ test("test4", async ({ page }) => {
   await page.getByRole("button", { name: "Reset My Password" }).click();
 });
 
-test("test4", async ({ page }) => {
+test("test5", async ({ page }) => {
   await page.goto("https://magento.softwaretestingboard.com/");
   await page.getByLabel("Consent", { exact: true }).click();
   await page.getByRole("link", { name: "Sign In" }).click();
@@ -49,7 +47,7 @@ test("test4", async ({ page }) => {
   await page.getByRole("button", { name: "Reset My Password" }).click();
 });
 
-test("test4", async ({ page }) => {
+test("test6", async ({ page }) => {
   await page.goto("https://magento.softwaretestingboard.com/");
   await page.getByLabel("Consent", { exact: true }).click();
   await page.getByRole("link", { name: "Sign In" }).click();
