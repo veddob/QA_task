@@ -1,5 +1,6 @@
 import { test, expect } from "@playwright/test";
 
+// Empty input
 test("test", async ({ page }) => {
   await page.goto("https://magento.softwaretestingboard.com/");
   await page.getByLabel("Consent", { exact: true }).click();
@@ -7,6 +8,7 @@ test("test", async ({ page }) => {
   await page.getByRole("button", { name: "Sign In" }).click();
 });
 
+// Invalid email and valid pass
 test("test2", async ({ page }) => {
   await page.goto("https://magento.softwaretestingboard.com/");
   await page.getByLabel("Consent", { exact: true }).click();
@@ -18,6 +20,7 @@ test("test2", async ({ page }) => {
   await page.getByRole("button", { name: "Sign In" }).click();
 });
 
+// Valid email and valid pass (non-existing account)
 test("test3", async ({ page }) => {
   await page.goto("https://magento.softwaretestingboard.com/");
   await page.getByLabel("Consent", { exact: true }).click();
@@ -29,6 +32,7 @@ test("test3", async ({ page }) => {
   await page.getByRole("button", { name: "Sign In" }).click();
 });
 
+// Empty forgot pass
 test("test4", async ({ page }) => {
   await page.goto("https://magento.softwaretestingboard.com/");
   await page.getByLabel("Consent", { exact: true }).click();
@@ -37,6 +41,7 @@ test("test4", async ({ page }) => {
   await page.getByRole("button", { name: "Reset My Password" }).click();
 });
 
+// Invalid email in forgot pass
 test("test5", async ({ page }) => {
   await page.goto("https://magento.softwaretestingboard.com/");
   await page.getByLabel("Consent", { exact: true }).click();
@@ -47,6 +52,7 @@ test("test5", async ({ page }) => {
   await page.getByRole("button", { name: "Reset My Password" }).click();
 });
 
+// Valid email in forgot pass
 test("test6", async ({ page }) => {
   await page.goto("https://magento.softwaretestingboard.com/");
   await page.getByLabel("Consent", { exact: true }).click();
